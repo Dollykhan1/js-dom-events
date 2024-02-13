@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary: Event Handlers</title>
+</head>
+<body>
+    <h1>Explore Dom Events</h1>
+    <button onclick="makeBlue()">Make Blue</button>
+    <button id="make-red">Make Red></button>
+    <br>
+    <input id="user-email" type="email">
+    <script>
+        //option number1
+        function makeBlue(){
+            document.body.style.backgroundColor='Blue';
+        }
+        //option number2
+        document.getElementById('make-red').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'red';
+        });
+         // keyup event
+         document.getElementById('user-email').addEventListener('keyup', function(event){
+            console.log(event.target.value)
+         })
+        
+    </script>
+</body>
+</html>
